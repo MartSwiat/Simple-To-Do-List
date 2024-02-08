@@ -14,6 +14,15 @@ def show_tasks(tasks):
             print(f"{i}. {task['task']} - {'DONE' if task['done'] else 'NOT DONE'}")
 
 
+def add_task(tasks, new_task):
+    tasks.append({'task': new_task, 'done': False})
+    print(f'Task {new_task} added to the List.')
+
+
+
+# show_menu()
 tasks = [{"task": "some task", "done": False}]
-print(type(tasks))
-show_tasks(tasks)
+# print(type(tasks))
+# show_tasks(tasks)
+# task = input('Please enter task to add: ')
+# add_task(tasks, task)
