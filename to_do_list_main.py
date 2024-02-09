@@ -19,10 +19,18 @@ def add_task(tasks, new_task):
     print(f'Task {new_task} added to the List.')
 
 
+def mark_as_done(tasks, task_index):
+    if 1 <= task_index <= len(tasks):
+        tasks[task_index - 1]['done'] = True
+        print(f"{tasks[task_index - 1]['task']} marked as done")
+    else:
+        print(f'task with index: {task_index} does not exist. Try again')
 
-# show_menu()
-tasks = [{"task": "some task", "done": False}]
-# print(type(tasks))
-# show_tasks(tasks)
+show_menu()
+tasks_to_do = [{"task": "some task", "done": False}]
+# print(type(tasks_to_do))
+# show_tasks(tasks_to_do)
 # task = input('Please enter task to add: ')
-# add_task(tasks, task)
+# add_task(tasks_to_do, task)
+task_num = int(input('Please enter task number to mark as done: '))
+mark_as_done(tasks_to_do, task_num)
