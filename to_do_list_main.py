@@ -1,3 +1,6 @@
+import functions
+
+
 def show_menu():
     print('\nTO-DO-LIST-Menu: ')
     menu = ('Tasks', 'Add Task', 'Mark Task as Done', 'Remove Task', 'Exit')
@@ -40,7 +43,7 @@ def main():
 
     while True:
         show_menu()
-        choice = int(input('Please enter number from the list: '))
+        choice = functions.read_integer('Please enter number from the list: ')
         match choice:
             case 1:
                 show_tasks(tasks_to_do)
